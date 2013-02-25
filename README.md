@@ -2,6 +2,10 @@
 Anti Rsi Notifier
 ======================
 
+Usage : 
+
+    $ antirsi start
+    $ antirsi stop
 
 
 Installation
