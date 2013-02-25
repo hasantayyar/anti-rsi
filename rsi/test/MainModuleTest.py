@@ -1,7 +1,7 @@
 import unittest
 
-from mypackage import mymodule
+from rsi  import mainmodule
 
 class MainoduleTest(unittest.TestCase):
-    def test_main(self):
-        self.assertEqual('ok', mainmodule.main())
+    def test_log(self):
+        self.assertEqual('ok', mainmodule.log("ok"))
