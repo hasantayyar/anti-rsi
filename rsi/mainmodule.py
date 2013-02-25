@@ -5,8 +5,8 @@ from daemon import Daemon
 class rsidaemon(Daemon):
     def run(self):
         while True:
-            log("keep running")
-            time.sleep(1)
+            # something here about notifications
+            time.sleep(10)
 if __name__ == '__main__':
     dm = rsidaemon("/tmp/anti-rsi.pid")
     operation = sys.argv[1]
