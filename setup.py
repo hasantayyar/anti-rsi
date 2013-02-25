@@ -9,7 +9,7 @@ setup(
   url="https://github.com/hasantayyar/anti-rsi",
   entry_points={
   'console_scripts': [
-      'rsibin = rsi.mainmodule:main'
+      'antirsi = rsi.mainmodule:main'
     ]
   },
   test_suite='rsi.test',

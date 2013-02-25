@@ -9,7 +9,11 @@ class rsidaemon(Daemon):
             time.sleep(1)
 if __name__ == '__main__':
     dm = rsidaemon("/tmp/anti-rsi.pid")
-    dm.start()
+    operation = sys.argv[1]
+    if operation == "start":
+        dm.start()
+    elif operation == "stop":
+        dm.stop()
 
 def log(msg):
     return msg
