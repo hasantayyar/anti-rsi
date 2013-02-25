@@ -8,6 +8,8 @@ class rsidaemon(Daemon):
             # something here about notifications
             time.sleep(10)
 if __name__ == '__main__':
+    main()
+def main():
     dm = rsidaemon("/tmp/anti-rsi.pid")
     operation = sys.argv[1]
     if operation == "start":

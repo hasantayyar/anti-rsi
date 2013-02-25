@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
   name='anti-rsi',
-  version='0.0.1',
+  version='0.0.1dev',
   url="https://github.com/hasantayyar/anti-rsi",
   entry_points={
   'console_scripts': [
