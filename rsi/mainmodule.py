@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 import sys, time
 from daemon import Daemon
+import osxnotification
+import time
+
 
 class rsidaemon(Daemon):
     def run(self):
         while True:
-            # something here about notifications
+            osxnotification.notify("RSI ALERT!", "time for break!", 'lorem ipsum dolor sit amet lorem ipsum bla bla' )
             time.sleep(10)
 if __name__ == '__main__':
     main()
