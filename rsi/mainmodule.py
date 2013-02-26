@@ -1,15 +1,15 @@
 #!/usr/bin/env python
 import sys, time
 from daemon import Daemon
-import osxnotification
 import time
 
 
 class rsidaemon(Daemon):
     def run(self):
         while True:
+            import osxnotification
             osxnotification.notify("RSI ALERT!", "time for break!", 'lorem ipsum dolor sit amet lorem ipsum bla bla' )
-            time.sleep(10)
+            time.sleep(60*15)
 if __name__ == '__main__':
     main()
 def main():
