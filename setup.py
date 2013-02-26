@@ -12,7 +12,7 @@ setup(
       'antirsi = rsi.mainmodule:main'
     ]
   },
-  extras_require = {'notification':  ["pynotify"]}
+  extras_require = {'notification':  ["pynotify"]},
   test_suite='rsi.test',
   packages=['rsi'],
   license='Creative Commons Attribution-Noncommercial-Share Alike license',
