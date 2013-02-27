@@ -2,14 +2,23 @@
 import sys, time
 from daemon import Daemon
 import time
+import datetime
 
 
 class rsidaemon(Daemon):
     def run(self):
         while True:
             import osxnotification
-            osxnotification.notify("RSI ALERT!", "time for break!", 'lorem ipsum dolor sit amet lorem ipsum bla bla' )
-            time.sleep(60*15)
+            now = datetime.datetime.now()
+            m = now.minute
+            msg = False
+            if m % 10 == 0:
+                msg = "Hands up for one minute!"
+            elif m % 30 == 0:
+                msg = "Arm exercises for 2 minute!"
+            if msg:
+                osxnotification.notify("RSI ALERT!", "time for break!", msg)
+            time.sleep(10)
 if __name__ == '__main__':
     main()
 def main():
