@@ -11,13 +11,14 @@ class rsidaemon(Daemon):
             import osxnotification
             now = datetime.datetime.now()
             m = now.minute
+            s = now.second
             msg = False
             notif_showed = False
-            if m % 10 == 0:
+            if m % 10 == 0 and s < 2:
                 msg = "Hands up for one minute!"
                 if notif_showed == False:
                     notif_showed = True
-            elif m % 30 == 0:
+            elif m % 30 == 0 and s < 2:
                 msg = "Arm exercises for 2 minute!"
                 if notif_showed == False:
                     notif_showed = True
@@ -26,7 +27,7 @@ class rsidaemon(Daemon):
             if msg and  notif_showed:
                 notif_showed = True
                 osxnotification.notify("RSI ALERT!", "time for break!", msg)
-            time.sleep(10)
+            time.sleep(1)
 if __name__ == '__main__':
     main()
 def main():
