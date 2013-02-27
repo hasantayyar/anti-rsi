@@ -7,6 +7,9 @@ Usage :
     $ antirsi start
     $ antirsi stop
 
+![screenshot](https://raw.github.com/hasantayyar/anti-rsi/master/preview.jpg)
+
+
 
 Installation
 ------------
