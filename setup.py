@@ -15,6 +15,11 @@ setup(
   extras_require = {'notification':  ["pynotify"]},
   test_suite='rsi.test',
   packages=['rsi'],
+  package_data={
+    'icons': [
+        'static/img/warning.png'
+    ]
+  },
   license='Creative Commons Attribution-Noncommercial-Share Alike license',
   long_description=open('README.md').read(),
 )
